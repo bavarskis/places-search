@@ -10,6 +10,8 @@ import CoreLocation
 
 extension PlacesView {
     @MainActor class ViewModel: ObservableObject {
+        // MARK: - Published
+        
         @Published var places: [Place] = []
         @Published var rangeInMeters = Double(5000) {
             willSet {
@@ -20,16 +22,20 @@ extension PlacesView {
         @Published var isShowingError = false
         @Published var sliderText: String
   
-        let minRangeLimitInMeters = Double(1000)
-        let maxRangeLimitInMeters = Double(50000)
+        // MARK: - Dependencies
         
         let placesService: PlacesServiceProtocol
         let userLocator: UserLocating
         
-        var userLocation: CLLocation?
+        // MARK: - Constants
+        
         let title = NSLocalizedString("placesTitle", comment: "")
         let genericErrorMessage = NSLocalizedString("genericErrorMessage", comment: "")
         let okTitle = NSLocalizedString("ok", comment: "")
+        let minRangeLimitInMeters = Double(1000)
+        let maxRangeLimitInMeters = Double(50000)
+        
+        // MARK: - init
         
         init(placesService: PlacesServiceProtocol = PlacesService(),
              userLocator: UserLocating =  UserLocator()) {
@@ -39,6 +45,8 @@ extension PlacesView {
             self.rangeInMeters = range
             self.sliderText = Self.sliderText(range: range)
         }
+        
+        // MARK: - Data fetching
         
         func fetchPlaces() async {
             isShowingError = false
@@ -52,6 +60,8 @@ extension PlacesView {
             
             isFetchingData = false
         }
+        
+        // MARK: - Slider
         
         static func sliderText(range: Double) -> String{
             "\(NSLocalizedString("searchingInRange", comment: "")) \(Int(range) / 1000) \(NSLocalizedString("kilometersShort", comment: ""))"
