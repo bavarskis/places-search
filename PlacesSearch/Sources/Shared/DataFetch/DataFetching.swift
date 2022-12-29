@@ -8,9 +8,10 @@
 import Foundation
 
 protocol DataFetching {
+    var sessionAuthenticator: SessionAuthenticating.Type { get }
     var urlSession: URLSession { get }
     func fetch<DataType: Decodable>(endpoint: NetworkEndpoint,
-                                  parameters: RequestParameters) async throws -> DataType
+                                    parameters: RequestParameters) async throws -> DataType
 }
 
 extension DataFetching {
@@ -21,7 +22,7 @@ extension DataFetching {
      - parameter parameters: Parameters to pass with request
      */
     func fetch<DataType: Decodable>(endpoint: NetworkEndpoint,
-                                  parameters: RequestParameters) async throws -> DataType {
+                                    parameters: RequestParameters) async throws -> DataType {
         var urlComponents = endpoint.urlComponents
         urlComponents.queryItems = parameters.queryItems
 
@@ -33,7 +34,8 @@ extension DataFetching {
             throw CoreError.invalidUrl
         }
 
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.allHTTPHeaderFields = sessionAuthenticator.authorizationHeader
         var result: (data: Data, response: URLResponse)
         do {
             result = try await urlSession.data(for: request)

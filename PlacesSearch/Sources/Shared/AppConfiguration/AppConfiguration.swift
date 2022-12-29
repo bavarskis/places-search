@@ -37,4 +37,8 @@ extension AppConfiguration: SessionAuthenticating {
 
         return contents
     }
+    
+    static var authorizationHeader: [String: String] {
+        ["Authorization": Self.apiToken]
+    }
 }

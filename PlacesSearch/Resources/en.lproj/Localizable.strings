@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  PlacesSearch
+
+  Created by Aurimas Bavarskis on 29/12/2022.
+  
+*/
+
+"imageUnavailableTitle" = "Image unavailable";
+"placesTitle" = "Places";
+"searchingInRange" = "Searching in range of";
+"kilometersShort" = "km";
+"genericErrorMessage" = "Semething went wrong";
+"ok" = "Ok";

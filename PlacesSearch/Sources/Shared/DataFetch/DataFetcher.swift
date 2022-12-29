@@ -12,4 +12,8 @@ final class DataFetcher: DataFetching {
     lazy var urlSession: URLSession = {
         URLSession(configuration: URLSessionConfiguration.default)
     }()
+    
+    lazy var sessionAuthenticator: SessionAuthenticating.Type = {
+        AppConfiguration.self
+    }()
 }

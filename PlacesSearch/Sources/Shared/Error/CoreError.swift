@@ -14,8 +14,6 @@ enum CoreError: Error {
     case generic
     case invalidUrl
     case jsonMapping(Error)
-    case noContent
     case error(Error)
     case http(code: ErrorCode)
-    case userLocation
 }

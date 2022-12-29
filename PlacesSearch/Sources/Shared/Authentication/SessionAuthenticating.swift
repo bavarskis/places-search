@@ -10,4 +10,5 @@ import Foundation
 protocol SessionAuthenticating {
     typealias ApiToken = String
     static var apiToken: ApiToken { get }
+    static var authorizationHeader: [String: String] { get }
 }
