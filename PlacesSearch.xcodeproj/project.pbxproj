@@ -13,6 +13,7 @@
 		0310D78E295D934C00C5DF4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0310D78D295D934C00C5DF4A /* Preview Assets.xcassets */; };
 		0310D7A2295D934C00C5DF4A /* PlacesSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310D7A1295D934C00C5DF4A /* PlacesSearchUITests.swift */; };
 		0310D7A4295D934C00C5DF4A /* PlacesSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310D7A3295D934C00C5DF4A /* PlacesSearchUITestsLaunchTests.swift */; };
+		0388A621295DB55D0060FA4B /* foursquaretoken.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0388A620295DB55D0060FA4B /* foursquaretoken.txt */; };
 		03ED5F59295D9959001EB72F /* SessionAuthenticating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ED5F58295D9959001EB72F /* SessionAuthenticating.swift */; };
 		03ED5F5F295D9BA9001EB72F /* UserLocating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ED5F5E295D9BA9001EB72F /* UserLocating.swift */; };
 		03ED5F62295D9EE6001EB72F /* CoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ED5F61295D9EE6001EB72F /* CoreError.swift */; };
@@ -23,7 +24,6 @@
 		03ED5F6E295DA1E5001EB72F /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ED5F6D295DA1E5001EB72F /* RequestParameters.swift */; };
 		03ED5F71295DA237001EB72F /* String+UrlValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ED5F70295DA237001EB72F /* String+UrlValidation.swift */; };
 		03ED5F73295DA2CC001EB72F /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ED5F72295DA2CC001EB72F /* DataFetcher.swift */; };
-		03ED5F76295DA7DF001EB72F /* foursquaretoken.txt in Resources */ = {isa = PBXBuildFile; fileRef = 03ED5F75295DA7DF001EB72F /* foursquaretoken.txt */; };
 		03ED5F7B295DA8CB001EB72F /* DataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ED5F7A295DA8CB001EB72F /* DataFetcherTests.swift */; };
 		03ED5F7E295DA94A001EB72F /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ED5F7D295DA949001EB72F /* MockURLProtocol.swift */; };
 		03ED5F80295DAA14001EB72F /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 03ED5F7F295DAA14001EB72F /* person.json */; };
@@ -59,6 +59,7 @@
 		0310D79D295D934C00C5DF4A /* PlacesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0310D7A1295D934C00C5DF4A /* PlacesSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSearchUITests.swift; sourceTree = "<group>"; };
 		0310D7A3295D934C00C5DF4A /* PlacesSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0388A620295DB55D0060FA4B /* foursquaretoken.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = foursquaretoken.txt; sourceTree = "<group>"; };
 		03ED5F58295D9959001EB72F /* SessionAuthenticating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionAuthenticating.swift; sourceTree = "<group>"; };
 		03ED5F5E295D9BA9001EB72F /* UserLocating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocating.swift; sourceTree = "<group>"; };
 		03ED5F61295D9EE6001EB72F /* CoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreError.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		03ED5F6D295DA1E5001EB72F /* RequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
 		03ED5F70295DA237001EB72F /* String+UrlValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UrlValidation.swift"; sourceTree = "<group>"; };
 		03ED5F72295DA2CC001EB72F /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
-		03ED5F75295DA7DF001EB72F /* foursquaretoken.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = foursquaretoken.txt; sourceTree = "<group>"; };
 		03ED5F7A295DA8CB001EB72F /* DataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherTests.swift; sourceTree = "<group>"; };
 		03ED5F7D295DA949001EB72F /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		03ED5F7F295DAA14001EB72F /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
@@ -126,10 +126,10 @@
 		0310D785295D934B00C5DF4A /* PlacesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0388A620295DB55D0060FA4B /* foursquaretoken.txt */,
 				0310D786295D934B00C5DF4A /* PlacesSearchApp.swift */,
 				0310D788295D934B00C5DF4A /* ContentView.swift */,
 				03ED5F54295D94EF001EB72F /* Sources */,
-				03ED5F74295DA760001EB72F /* Resources */,
 				0310D78A295D934C00C5DF4A /* Assets.xcassets */,
 				0310D78C295D934C00C5DF4A /* Preview Content */,
 			);
@@ -248,14 +248,6 @@
 				03ED5F70295DA237001EB72F /* String+UrlValidation.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		03ED5F74295DA760001EB72F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				03ED5F75295DA7DF001EB72F /* foursquaretoken.txt */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		03ED5F77295DA889001EB72F /* Core */ = {
@@ -415,7 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03ED5F76295DA7DF001EB72F /* foursquaretoken.txt in Resources */,
+				0388A621295DB55D0060FA4B /* foursquaretoken.txt in Resources */,
 				0310D78E295D934C00C5DF4A /* Preview Assets.xcassets in Resources */,
 				0310D78B295D934C00C5DF4A /* Assets.xcassets in Resources */,
 			);
